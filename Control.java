@@ -40,8 +40,8 @@ public abstract class Control {
 		KButton btn0, btn7;
 		for (int j = 0; j < 8; j++) {
 			btn0 = vue.getBouton(0,j); btn7 = vue.getBouton(7,j);
-			btn0.setIcon(new ImageIcon(model.PATH_TOURS+model.tabTours[0][j]+".png"));
-			btn7.setIcon(new ImageIcon(model.PATH_TOURS+model.tabTours[7][j]+".png"));
+			btn0.setIcon(new ImageIcon(getClass().getResource(model.PATH_TOURS+model.tabTours[0][j]+".png")));
+			btn7.setIcon(new ImageIcon(getClass().getResource(model.PATH_TOURS+model.tabTours[7][j]+".png")));
 			btn0.setPath(model.PATH_TOURS);
 			btn0.setType(model.tabTours[0][j]);
 			btn7.setPath(model.PATH_TOURS);
@@ -125,7 +125,7 @@ public abstract class Control {
 		// HAUT
 		while (i-n >= 0 && model.tabTours[i-n][j] == ""){
 			model.tabCoups[i-n][j] = coup;
-			vue.getBouton(i-n,j).setIcon(new ImageIcon(model.PATH_COUPS+coup+".png"));
+			vue.getBouton(i-n,j).setIcon(new ImageIcon(getClass().getResource(model.PATH_COUPS+coup+".png")));
 			vue.getBouton(i-n,j).setPath(model.PATH_COUPS);
 			vue.getBouton(i-n,j).setType(coup);
 			n += 1;
@@ -134,7 +134,7 @@ public abstract class Control {
 		// BAS
 		while (i+n <= 7 && model.tabTours[i+n][j] == ""){
 			model.tabCoups[i+n][j] = coup;
-			vue.getBouton(i+n,j).setIcon(new ImageIcon(model.PATH_COUPS+coup+".png"));
+			vue.getBouton(i+n,j).setIcon(new ImageIcon(getClass().getResource(model.PATH_COUPS+coup+".png")));
 			vue.getBouton(i+n,j).setPath(model.PATH_COUPS);
 			vue.getBouton(i+n,j).setType(coup);
 			n += 1;
@@ -143,7 +143,7 @@ public abstract class Control {
 		// GAUCHE
 		while (j-n >= 0 && model.tabTours[i][j-n] == ""){
 			model.tabCoups[i][j-n] = coup;
-			vue.getBouton(i,j-n).setIcon(new ImageIcon(model.PATH_COUPS+coup+".png"));
+			vue.getBouton(i,j-n).setIcon(new ImageIcon(getClass().getResource(model.PATH_COUPS+coup+".png")));
 			vue.getBouton(i,j-n).setPath(model.PATH_COUPS);
 			vue.getBouton(i,j-n).setType(coup);
 			n += 1;
@@ -152,7 +152,7 @@ public abstract class Control {
 		// DROITE
 		while (j+n <= 7 && model.tabTours[i][j+n] == ""){
 			model.tabCoups[i][j+n] = coup;
-			vue.getBouton(i,j+n).setIcon(new ImageIcon(model.PATH_COUPS+coup+".png"));
+			vue.getBouton(i,j+n).setIcon(new ImageIcon(getClass().getResource(model.PATH_COUPS+coup+".png")));
 			vue.getBouton(i,j+n).setPath(model.PATH_COUPS);
 			vue.getBouton(i,j+n).setType(coup);
 			n += 1;
@@ -161,7 +161,7 @@ public abstract class Control {
 		// DIAGONALE BAS-DROITE
 		while (i+n <= 7 && j+n <= 7 && model.tabTours[i+n][j+n] == ""){
 			model.tabCoups[i+n][j+n] = coup;
-			vue.getBouton(i+n,j+n).setIcon(new ImageIcon(model.PATH_COUPS+coup+".png"));
+			vue.getBouton(i+n,j+n).setIcon(new ImageIcon(getClass().getResource(model.PATH_COUPS+coup+".png")));
 			vue.getBouton(i+n,j+n).setPath(model.PATH_COUPS);
 			vue.getBouton(i+n,j+n).setType(coup);
 			n += 1;
@@ -170,7 +170,7 @@ public abstract class Control {
 		// DIAGONALE HAUT-DROITE
 		while (i-n >= 0 && j+n <= 7 && model.tabTours[i-n][j+n] == ""){
 			model.tabCoups[i-n][j+n] = coup;
-			vue.getBouton(i-n,j+n).setIcon(new ImageIcon(model.PATH_COUPS+coup+".png"));
+			vue.getBouton(i-n,j+n).setIcon(new ImageIcon(getClass().getResource(model.PATH_COUPS+coup+".png")));
 			vue.getBouton(i-n,j+n).setPath(model.PATH_COUPS);
 			vue.getBouton(i-n,j+n).setType(coup);
 			n += 1;
@@ -179,7 +179,7 @@ public abstract class Control {
 		// DIAGONALE BAS-GAUCHE
 		while (i+n <= 7 && j-n >= 0 && model.tabTours[i+n][j-n] == ""){
 			model.tabCoups[i+n][j-n] = coup;
-			vue.getBouton(i+n,j-n).setIcon(new ImageIcon(model.PATH_COUPS+coup+".png"));
+			vue.getBouton(i+n,j-n).setIcon(new ImageIcon(getClass().getResource(model.PATH_COUPS+coup+".png")));
 			vue.getBouton(i+n,j-n).setPath(model.PATH_COUPS);
 			vue.getBouton(i+n,j-n).setType(coup);
 			n += 1;
@@ -188,7 +188,7 @@ public abstract class Control {
 		// DIAGONALE HAUT-GAUCHE
 		while (i-n >= 0 && j-n >= 0 && model.tabTours[i-n][j-n] == ""){
 			model.tabCoups[i-n][j-n] = coup;
-			vue.getBouton(i-n,j-n).setIcon(new ImageIcon(model.PATH_COUPS+coup+".png"));
+			vue.getBouton(i-n,j-n).setIcon(new ImageIcon(getClass().getResource(model.PATH_COUPS+coup+".png")));
 			vue.getBouton(i-n,j-n).setPath(model.PATH_COUPS);
 			vue.getBouton(i-n,j-n).setType(coup);
 			n += 1;
@@ -218,7 +218,7 @@ public abstract class Control {
 		new_btn.setType(model.old_tour);
 		model.tabTours[old_coords[0]][old_coords[1]] = "";
 		model.tabTours[new_coords[0]][new_coords[1]] = old_btn.getType();
-		new_btn.setIcon(new ImageIcon(model.PATH_TOURS+old_btn.getType()+".png"));
+		new_btn.setIcon(new ImageIcon(getClass().getResource(model.PATH_TOURS+old_btn.getType()+".png")));
 		//old
 		old_btn.setIcon(null);
 

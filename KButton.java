@@ -2,6 +2,7 @@
  * Created by Dastan21
  */
 
+import java.net.URL;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import javax.swing.event.*;
@@ -29,9 +30,9 @@ public class KButton extends JButton {
 					if (getModel().isRollover()){
 						// if (isEnabled)
 						if (isEnabled())
-							setIcon(new ImageIcon(path+type+"_selected.png"));
+							setIcon(new ImageIcon(getClass().getResource(path+type+"_selected.png")));
 					} else {
-						setIcon(new ImageIcon(path+type+".png"));
+						setIcon(new ImageIcon(getClass().getResource(path+type+".png")));
 					}
 				}
                 if (getModel().isPressed()) setBackground(color);
