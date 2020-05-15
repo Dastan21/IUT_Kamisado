@@ -5,4 +5,4 @@ Kamisado game recreation in Java
 
 There is the source codes, the images and an executable jar
 
-https://www.yucata.de/en/Rules/Kamisado
+Rules : https://www.yucata.de/en/Rules/Kamisado
